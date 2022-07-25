@@ -1,38 +1,71 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.fighters-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(205px * 4);
+  gap: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fighters-grid div {
+  width: 200px;
+  position: relative;
+  transition: transform 0.3s;
+  background-color: slategray;
 }
+
+.fighters-grid div:hover {
+  transform: scale(1.07);
+  cursor: pointer;
+}
+
+.fighter-name {
+  position: absolute;
+  right: 0;
+  bottom: -25%;
+  font-size: 1.8em;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+  text-transform: uppercase;
+}
+
+.fighter-img {
+  width: 100%;
+  height: auto;
+}
+
+#fighter-screen {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 1;
+}
+
+.char-model {
+  position: fixed;
+  bottom: -50%;
+  right: 0%;
+  width: 65%;
+}
+
+.char-name {
+  position: fixed;
+  z-index: 2;
+  text-transform: uppercase;
+  font-style: italic;
+  left: 0;
+  bottom: 0;
+  font-size: 10em;
+}
+
+.char-name-bg {}
